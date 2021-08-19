@@ -3,10 +3,10 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = process.env.port || 3000;
+const port = 3000;
 
-app.listen(port, () => {
-  console.log("app has started");
+const listener = app.listen(port, () => {
+  console.log("app has started", listener.address().port);
 });
 
 const DIST_DIR = path.join(__dirname, "dist");

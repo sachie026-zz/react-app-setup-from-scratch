@@ -1,15 +1,15 @@
 import React from "react";
-import { ReactDOM } from "react";
-import { BrouseRouter as Route, Router, Switch } from "react-router-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Route, Router, Switch } from "react-router-dom";
 
 import App from "./src/App";
 
 const appRouting = (
   <Router>
     <Switch>
-      <Route exact path="/" component={App} />
+      <Route path="/" component={App} />
     </Switch>
   </Router>
 );
 
-ReactDOM.render(appRouting, document.getElementById('root'));
+ReactDOM.render(appRouting, document.getElementById("root"));
